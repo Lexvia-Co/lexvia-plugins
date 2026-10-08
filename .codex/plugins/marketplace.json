@@ -1,0 +1,18 @@
+{
+"name": "lexvia-marketplace",
+"interface": {"displayName": "Lexvia Remote Marketplace"},
+"plugins": [
+ {
+"name": "lexvia-testing",
+"source": {"source": "url", 
+           "url":"https://github.com/sibo-zhang25/lexvia-plugins", 
+           "path": "./plugins/lexvia-testing",
+           "ref": "main"
+          },
+"policy": {"installation": "INSTALLED_BY_DEFAULT", "authentication": "ON_FIRST_USE"}
+
+ }
+ ]
+}
+
+
