@@ -9,7 +9,7 @@
            "path": "./plugins/lexvia-testing",
            "ref": "main"
           },
-"policy": {"installation": "INSTALLED_BY_DEFAULT", "authentication": "ON_FIRST_USE"}
+"policy": {"installation": "INSTALLED_BY_DEFAULT", "authentication": "ON_USE"}
 
  }
  ]
