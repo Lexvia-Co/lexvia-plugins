@@ -1,0 +1,11 @@
+{
+  "name": "lexvia-legal",
+  "version": "0.1.0",
+  "description": "plugin with skills for legal research, analysis, and document drafting",
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "Legal Department",
+    "shortDescription": "plugin with skills for legal research, analysis, and document drafting",
+    "capabilities": []
+  }
+}
