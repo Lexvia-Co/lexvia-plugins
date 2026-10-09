@@ -1,16 +1,35 @@
 {
 "name": "lexvia-marketplace",
-"interface": {"displayName": "Lexvia Remote Marketplace"},
+"interface": {"displayName": "Lexvia Official Plugin list"},
 "plugins": [
  {
-"name": "lexvia-testing",
+"name": "development",
 "source": {"source": "url", 
            "url":"https://github.com/sibo-zhang25/lexvia-plugins", 
            "path": "./plugins/lexvia-testing",
            "ref": "main"
           },
 "policy": {"installation": "INSTALLED_BY_DEFAULT", "authentication": "ON_USE"}
-
+ }
+,
+{
+"name": "marketing",
+"source": {"source": "url", 
+           "url":"https://github.com/sibo-zhang25/lexvia-plugins", 
+           "path": "./plugins/lexvia-marketing",
+           "ref": "main"
+          },
+"policy": {"installation": "INSTALLED_BY_DEFAULT", "authentication": "ON_USE"}
+ }
+ ,
+ {
+"name": "legal",
+"source": {"source": "url", 
+           "url":"https://github.com/sibo-zhang25/lexvia-plugins", 
+           "path": "./plugins/lexvia-legal",
+           "ref": "main"
+          },
+"policy": {"installation": "INSTALLED_BY_DEFAULT", "authentication": "ON_USE"}
  }
  ]
 }
