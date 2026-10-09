@@ -4,7 +4,7 @@
   "description": "company-wide plugin for testing skills and capabilities.",
   "skills": "./skills/",
   "interface": {
-    "displayName": "Lexvia Testing",
+    "displayName": "Development",
     "shortDescription": "company-wide plugin for testing skills and capabilities.",
     "capabilities": []
   }
