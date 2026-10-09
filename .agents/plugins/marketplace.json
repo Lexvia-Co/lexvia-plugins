@@ -3,7 +3,7 @@
 "interface": {"displayName": "Lexvia Official Plugin list"},
 "plugins": [
  {
-"name": "development",
+"name": "lexvia-testing",
 "source": {"source": "url", 
            "url":"https://github.com/Lexvia-Co/lexvia-plugins", 
            "path": "./plugins/lexvia-testing",
