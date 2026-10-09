@@ -5,7 +5,7 @@
  {
 "name": "development",
 "source": {"source": "url", 
-           "url":"https://github.com/sibo-zhang25/lexvia-plugins", 
+           "url":"https://github.com/Lexvia-Co/lexvia-plugins", 
            "path": "./plugins/lexvia-testing",
            "ref": "main"
           },
@@ -15,7 +15,7 @@
 {
 "name": "marketing",
 "source": {"source": "url", 
-           "url":"https://github.com/sibo-zhang25/lexvia-plugins", 
+           "url":"https://github.com/Lexvia-Co/lexvia-plugins", 
            "path": "./plugins/lexvia-marketing",
            "ref": "main"
           },
@@ -25,7 +25,7 @@
  {
 "name": "legal",
 "source": {"source": "url", 
-           "url":"https://github.com/sibo-zhang25/lexvia-plugins", 
+           "url":"https://github.com/Lexvia-Co/lexvia-plugins", 
            "path": "./plugins/lexvia-legal",
            "ref": "main"
           },
