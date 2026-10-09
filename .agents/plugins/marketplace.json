@@ -13,7 +13,7 @@
  }
 ,
 {
-"name": "marketing",
+"name": "lexvia-marketing",
 "source": {"source": "url", 
            "url":"https://github.com/Lexvia-Co/lexvia-plugins", 
            "path": "./plugins/lexvia-marketing",
@@ -23,7 +23,7 @@
  }
  ,
  {
-"name": "legal",
+"name": "lexvia-legal",
 "source": {"source": "url", 
            "url":"https://github.com/Lexvia-Co/lexvia-plugins", 
            "path": "./plugins/lexvia-legal",
