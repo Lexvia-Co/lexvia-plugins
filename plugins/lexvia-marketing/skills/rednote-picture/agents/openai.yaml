@@ -1,6 +1,6 @@
 interface:
   display_name: "Rednote Picture"
-  short_description: "Turn legal copy into a premium LEXVIA social visual"
-  default_prompt: "Use $rednote-picture to turn this Australian legal copy into a premium Chinese social-media image."
+  short_description: "Turn legal copy into a branded LEXVIA social visual"
+  default_prompt: "Use $rednote-picture to turn this Australian legal copy, including copy drafted with $rednote-content, into a premium Chinese LEXVIA social-media image with the official logo."
 policy:
   allow_implicit_invocation: true

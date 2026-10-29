@@ -1,6 +1,6 @@
 ---
 name: rednote-picture
-description: Turn pasted Chinese or bilingual Australian legal copy into a polished LEXVIA social-media image. Use whenever a user pastes article copy, a headline with notes, or legal post text; do not use for copywriting, legal analysis, translation, or text-only editing.
+description: Create a polished branded LEXVIA social-media image from Chinese or bilingual Australian legal copy, including copy just produced by the `rednote-content` skill. Use when a user asks to turn supplied or newly drafted legal social copy into a finished visual; do not use for copywriting, legal analysis, translation, or text-only editing.
 ---
 
 # Rednote Picture
@@ -16,7 +16,7 @@ If the user gives only a title or a short fragment, create a title-led editorial
 3. Choose one topic-specific visual metaphor, then call the image generator. Do not ask the user to approve a prompt unless a missing input materially blocks the work.
 4. Inspect the generated image. If brand spelling, critical Chinese text, crop, or an unwanted element is materially wrong, make one focused correction and re-check.
 5. Return the selected image inline. If the generation environment supplies a local output file, also place it in the active workspace under a descriptive filename and link it in the final response.
-6. Every finished image must include the complete two-line signature: `LEXVIA & CO` and, directly beneath it, `LAW • ADVISORY • MIGRATION`. This is mandatory even when the supplied copy does not request branding. Verify both lines are present and spelled exactly before delivery.
+6. Every finished image must display the official LEXVIA logo from `assets/brand/lexvia-logo.png`. Verify that the complete logo is visible, legible, proportionate, and undistorted before delivery.
 
 ## Style reference library
 
@@ -26,12 +26,12 @@ If the user gives only a title or a short fragment, create a title-led editorial
 
 `assets/brand/lexvia-logo.png` is the canonical LEXVIA logo asset. Treat it as the authoritative source for the brand colour system, not as a decorative image.
 
-- Before every generation, include the logo asset as a visual reference in addition to all images in `example/`.
+- Before every generation, include the logo asset as a visual reference in addition to all images in `example/`, and instruct the generator to place the complete official logo on the artwork.
 - Sample and preserve the logo's primary red faithfully as `LEXVIA_RED`; do not substitute a generic crimson, burgundy, orange-red, or bright scarlet.
 - Every finished image must contain a clearly visible, intentional use of `LEXVIA_RED`, such as a headline field, rule, editorial panel, seal, accent shape, or controlled lighting detail.
 - Use a restrained brand palette: `LEXVIA_RED`, white or warm off-white, charcoal/near-black, plus at most one muted topic-specific supporting colour.
 - Topic-led colours may support the story, but must not overpower or replace the brand red. Avoid dominant blue, green, purple, or unrelated gradient treatments unless they are visibly subordinated to `LEXVIA_RED`.
-- The logo itself must not be placed on the artwork unless explicitly requested. The mandatory two-line text signature remains the default brand treatment.
+- Place the official logo as an integrated signature element with calm breathing room; do not substitute, recreate, crop, recolour, stretch, or replace it with typed brand text.
 
 When the user supplies an actual image associated with the post, treat it as the primary visual direction for that post. First infer its subject type, framing, sense of place, energy, text density, and palette; use `example/` to retain LEXVIA's brand finish. Do not copy the supplied image exactly unless the user asks for an edit or close reproduction.
 
@@ -63,14 +63,14 @@ Create a premium Australian legal-advisory editorial image in a portrait social-
 - Lead with the visual that carries the strongest sense of the event. For regional migration, visa, or state-policy news, prefer a real location or credible news-photography-style scene. Use a contract spread, title certificate, dossier, letter/envelope, ribboned transfer path, key, seal, or other abstract legal object only when a place, people, or relevant environment cannot tell the story as well.
 - Use refined, high-contrast Chinese headline typography with a clear hierarchy. Set one large title, one concise takeaway or quote, then only the supporting information that can be read comfortably on a phone.
 - For a distinction or comparison, express it physically and editorially: paired documents, a split composition, a ribbon/trajectory, a central balancing object, or a contained comparison panel. Do not default to bar charts, icons, or card grids.
-- Every image must display the complete two-line signature: `LEXVIA & CO` with `LAW • ADVISORY • MIGRATION` directly beneath it. Spell both lines exactly; do not omit or alter the descriptor. Give it calm breathing room in a deliberate signature area; its position, ground, and treatment must follow the composition rather than a repeated footer formula.
+- Every image must display the complete official LEXVIA logo asset. Give it calm breathing room in a deliberate signature area; its position, ground, and treatment must follow the composition rather than a repeated footer formula. Preserve its original aspect ratio, complete lock-up, and brand colours.
 - Keep backgrounds and props intentional: books, fountain pens, seals, keys, paper texture, brass objects, architectural models, real landscapes, and softly out-of-focus interiors are welcome when relevant. Plants are optional accents only, never the default motif.
 - Do not use Sydney landmarks, Australian flags, government crests, or portraits as generic decoration. When a location is itself the story, prefer the relevant region's landscape, environment, architecture, or map cue over generic national imagery.
 - Avoid cartoon aesthetics, stock real-estate advertising scenes, generic icon grids, QR codes, watermarks, extra logos, or unconnected decorative objects.
 
 ### Reference quality bar
 
-The target is the visual language established by `example/`: a polished Chinese legal-advisory carousel cover with precise typography, generous negative space, carefully edited information, and a memorable scene or legal metaphor. Vary the palette, brightness, composition, material treatment, hero image, information structure, and signature placement from post to post. Preserve the reference library's premium editorial finish—not its individual layouts, repeated visual ingredients, or colour schemes.
+The target is the visual language established by `example/`: a polished Chinese legal-advisory carousel cover with precise typography, generous negative space, carefully edited information, and a memorable scene or legal metaphor. Vary the palette, brightness, composition, material treatment, hero image, information structure, and logo placement from post to post. Preserve the reference library's premium editorial finish—not its individual layouts, repeated visual ingredients, or colour schemes.
 
 ## Let the legal idea drive the image
 
@@ -90,7 +90,7 @@ Use short labels, margin notes, callouts, document annotations, trajectories, or
 
 - Keep the title, central takeaway, and legal caution highly legible and inside safe margins.
 - Use only the minimum on-image text needed to communicate the point: normally a title, one key distinction, and an optional short caution. Do not attempt to reproduce a long article verbatim.
-- Use Simplified Chinese for visible content by default. A short, accurate official program name, visa subclass, or institution name may remain in English when it materially helps recognition and is part of the supplied source, for example `NT Graduate / NT Resident` or `MigrationNT`. The only mandatory English is the two-line signature: `LEXVIA & CO` and `LAW • ADVISORY • MIGRATION`.
+- Use Simplified Chinese for visible content by default. A short, accurate official program name, visa subclass, or institution name may remain in English when it materially helps recognition and is part of the supplied source, for example `NT Graduate / NT Resident` or `MigrationNT`.
 - Do not mechanically translate or print an English legal term beside its Chinese equivalent. Convert the underlying idea into plain, accurate Chinese that an everyday reader can grasp (for example, use “登记业主” rather than `registered proprietor`, and “登记在产权上的限制或权益” where that explains the point better than a string of English terms). Keep specialist English out of decorative document props, labels, seals, books, and background scenery as well.
 - Preserve supplied source/caveat wording where present. If none is supplied, use a small general-information disclaimer only if legal-brand context has already made it expected.
 - Use concise visible copy when the supplied article is long; do not introduce new legal claims.
