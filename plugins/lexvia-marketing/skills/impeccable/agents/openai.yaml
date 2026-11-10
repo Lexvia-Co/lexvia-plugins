@@ -1,0 +1,6 @@
+interface:
+  display_name: "Impeccable"
+  short_description: "Explicit manual design and UI review playbooks"
+  default_prompt: "Use $impeccable to review or improve the named interface."
+policy:
+  allow_implicit_invocation: false

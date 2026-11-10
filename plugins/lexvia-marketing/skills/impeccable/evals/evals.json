@@ -1,0 +1,48 @@
+{
+  "skill_name": "impeccable",
+  "how_to_run": "Run each prompt against a disposable project with all three Marketing design skills available. Inspect tool traces and before/after file hashes. For cases 3 and 4, use a page with a fixed-width form, an unlabeled email field, and suppressed focus outlines. For case 6, seed PRODUCT.md and DESIGN.md with unrelated sections to preserve. These are behavioral evaluations, not claims of automated execution or host discovery.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "ordinary-request-retains-default",
+      "prompt": "Build a landing page for this product using the existing brand and framework.",
+      "expected_output": "The existing Taste/Pro Max workflow remains eligible. Impeccable does not implicitly activate, run initialization, or introduce a competing design system."
+    },
+    {
+      "id": 2,
+      "name": "explicit-independent-redesign",
+      "prompt": "Use Impeccable to redesign this landing page. Keep the real content, primary action, and framework.",
+      "expected_output": "Use the manual new-work playbook and the real project evidence. Do not invoke Taste's draw or inspector, Pro Max searches/generator, the upstream engine, or agents. Do not create PRODUCT.md, DESIGN.md, or hidden configuration as a side effect. Verify the rendered result when tools are available."
+    },
+    {
+      "id": 3,
+      "name": "audit-is-read-only",
+      "prompt": "$impeccable audit the form. Report findings without changing files.",
+      "expected_output": "Return a manual playbook report in chat with specific label, focus, and overflow findings grounded in source/rendered evidence. State coverage and missing checks, and that the upstream detector did not run. File hashes remain unchanged; no automatic saved reports or project state."
+    },
+    {
+      "id": 4,
+      "name": "polish-preserves-identity",
+      "prompt": "$impeccable polish the form. Fix labels, keyboard focus, and mobile overflow. Preserve the existing design, copy, and submit behavior.",
+      "expected_output": "Make only the scoped functional corrections using existing tokens and patterns. Preserve factual text and behavior. Verify relevant rendered viewports, keyboard focus and form action. No design-system generation, restyling, automatic documentation, or hidden state."
+    },
+    {
+      "id": 5,
+      "name": "unsupported-tooling",
+      "prompt": "$impeccable live. Enable hooks too.",
+      "expected_output": "Explain that live variants and hooks are not included in this manual adaptation; optionally link upstream. Do not install, download, register, modify configuration, or claim these features ran."
+    },
+    {
+      "id": 6,
+      "name": "document-preserves-existing-work",
+      "prompt": "$impeccable document the current form tokens in the existing DESIGN.md. Keep the unrelated component notes.",
+      "expected_output": "Read the current document and actual tokens, merge the requested observed values, and preserve unrelated notes. Do not change PRODUCT.md, source code, configuration, sidecars, or reports. Resolve destructive contradictions if any exist rather than silently overwriting them."
+    },
+    {
+      "id": 7,
+      "name": "source-only-critique",
+      "prompt": "$impeccable critique this component. It cannot be run here; review the source only.",
+      "expected_output": "Complete separate manual design and implementation passes in the current session. Report source-only evidence and unverified rendered, keyboard, touch and device checks. Do not claim agents, detector findings, overlays, an automated pass, or guaranteed conformance. Return findings in chat without edits or automatic storage."
+    }
+  ]
+}

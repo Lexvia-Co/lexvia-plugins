@@ -10,7 +10,10 @@ description: >-
   Next.js, Vue, Svelte, Astro, Tailwind) — also when the user says a page looks generic, templated,
   "AI-made", sloppy, or asks to make it look designed, premium, award-level or less like every other
   site. Also for app screens: dashboards, admin and analytics views, settings, inboxes and other screens
-  people work in, with their own run and rules.
+  people work in, with their own run and rules. Leads art direction alongside ui-ux-pro-max,
+  which supplies targeted UX, accessibility, interaction and stack guidance. For focused functional
+  UI fixes, use ui-ux-pro-max without drawing a new visual direction.
+  When the user explicitly selects Impeccable, defer to that independent workflow unless asked to combine them.
 ---
 
 # tasteskill v2
@@ -68,6 +71,27 @@ charts, real data that adds up, one finding stated, cropped and scaled the way t
 treats a picture. A fragment that looks like a working product is the strongest picture a software page
 has; grey bars and lorem numbers are the weakest. When a request mixes both (a landing page and the
 dashboard behind it), build each with its own run and one shared palette and typeface.
+
+## Working alongside UI UX Pro Max
+
+When the user explicitly selects Impeccable, use that independent workflow instead of
+starting Taste's draw or critique. Combine them only when the user asks to do so.
+
+When the sibling `ui-ux-pro-max` skill is available, Taste leads the visual concept, composition,
+palette, typography and screenshot critique for both pages and app screens. Read
+`../ui-ux-pro-max/SKILL.md` for focused UX, accessibility, interaction, responsive-layout, chart
+or detected-stack searches during implementation and review. Resolve its script paths from that
+skill's own installed directory.
+
+Keep the chosen Taste direction and existing project tokens. Skip Pro Max's design-system
+generation when Taste leads; its database styles, palettes, fonts and landing patterns must not
+start a competing direction. Apply functional accessibility corrections for contrast, focus,
+semantics, target sizes and reduced motion while preserving the direction as far as possible;
+explain any necessary visual adjustment.
+
+For a focused accessibility or component fix, use Pro Max's outcome and stack searches without
+running Taste's draw. When the user explicitly requests Pro Max alone, follow that skill without
+invoking Taste. Existing user brand constraints and project design systems remain authoritative.
 
 ## The run
 
