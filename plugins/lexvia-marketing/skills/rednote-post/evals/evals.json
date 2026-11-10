@@ -1,0 +1,66 @@
+{
+  "skill_name": "rednote-post",
+  "how_to_run": "Run prompts in a disposable consumer workspace with the three Marketing sibling skills available. Inspect stage order, actual generated images, final chat copy, DOCX text/metadata/rendering, and output paths. Use a controlled candidate image or unavailable-tool fixture for failure cases. These are behavioral evaluation scenarios, not an automated test runner or proof of installed-host discovery. Keep all generated artifacts outside the plugin source and cache.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "complete-permitted-post",
+      "prompt": "Use $rednote-post to explain NSW rental bonds to Chinese-speaking renters. Create the post and a matching LEXVIA image.",
+      "expected_output": "Run rednote-content through eligible-topic screening, current official-source research, drafting, tone and legal review; generate and inspect a branded image from that draft; then run Marketing humanizer in embedded mode. Verify the final text against research and the rendered image. Deliver the Chinese post, selected image inline, available image-file link, and an updated verified Word document. Respect the 1,000-character limit and default 3:4 format. Do not finish after an intermediate stage."
+    },
+    {
+      "id": 2,
+      "name": "meaning-changing-headline-needs-image-repair",
+      "prompt": "Complete this rental-bond post using the supplied verified draft and candidate image. The image headline says the landlord keeps the bond; the reviewed draft explains that it is lodged with NSW Fair Trading. Humanize the entire post, including its title, and deliver a matching pair.",
+      "expected_output": "Use the verified research and draft to preserve the correct claim during humanization. Identify the rendered headline's factual mismatch. Run one alignment-repair pass with the final copy and re-inspect the resulting image, retaining the picture skill's quality-correction allowance. Do not distort the final prose to accommodate the wrong image or deliver the stale image."
+    },
+    {
+      "id": 3,
+      "name": "equivalent-wording-needs-no-regeneration",
+      "prompt": "Complete this post with the supplied accurate candidate cover. Humanize its repetitive prose and simplify the title, keeping the verified meaning.",
+      "expected_output": "Run humanizer in embedded mode and compare the rewrite with the actual cover. If its wording and the shortened title remain equivalent in meaning, retain the image without another generation call. Deliver only the final rewrite and matching artifacts, without the humanizer's draft or remaining-pattern list."
+    },
+    {
+      "id": 4,
+      "name": "preserve-legal-facts-and-qualifications",
+      "prompt": "Create an NSW rental-bond explainer and cover. Make the prose conversational, but preserve every verified number, jurisdiction, source link, and qualification.",
+      "expected_output": "Verify facts through the content skill, preserve them during humanization, and compare any visible numbers and legal conditions with the final text. Do not turn a qualified rule into an absolute claim, invent a personal case story, add legal advice, or drop a caveat to meet the length limit. Correct humanizer factual drift before image reconciliation."
+    },
+    {
+      "id": 5,
+      "name": "excluded-topic-stops-before-artifacts",
+      "prompt": "Use $rednote-post to create a protection-visa application explainer and branded image.",
+      "expected_output": "Apply rednote-content's editorial restriction before research or artifact creation. Give its brief scope response and permitted alternatives without developing the excluded topic. Do not create research, drafts, image prompts, images, Word files, or humanizer inputs about it."
+    },
+    {
+      "id": 6,
+      "name": "mixed-request-keeps-only-independent-permitted-topic",
+      "prompt": "Create a Rednote post and cover about rental bonds, and include a separate asylum-application checklist.",
+      "expected_output": "Follow the content skill's mixed-request handling. Produce only the independently meaningful rental-bond post and matching cover, briefly stating that only in-scope material is included. Do not carry excluded passages into intermediates, prompts, hashtags, filenames, metadata, or final artifacts."
+    },
+    {
+      "id": 7,
+      "name": "missing-sibling-brand-asset-or-document-runtime",
+      "prompt": "Use $rednote-post to make a tenancy explainer and LEXVIA cover in an installation where a required sibling skill, the official logo asset, or the document export/rendering runtime is unavailable.",
+      "expected_output": "After screening the topic, identify the missing dependency using the installed skill paths and actual tool/runtime availability. Report the blocker and actual completed stages without claiming the orchestrator ran successfully. If preflight is blocked, do not begin research, generation, or document authoring. Do not silently replace the humanizer with another plugin's skill, recreate the logo from text, write into the plugin cache, or claim Word verification from text extraction alone."
+    },
+    {
+      "id": 8,
+      "name": "failed-generation-or-unresolved-repair",
+      "prompt": "Complete the rental-bond post, but the image tool fails or the final repaired cover still contains a contradictory number or an unreadable logo.",
+      "expected_output": "Respect the bounded alignment pass and picture quality-correction allowance. Return verified humanized text and the updated verified Word document as partial completion, identify the image blocker, and omit the defective image. Do not repeat the full workflow, fabricate an image link, or claim a matching finished pair."
+    },
+    {
+      "id": 9,
+      "name": "final-document-and-workspace-consistency",
+      "prompt": "Run $rednote-post from a plugin installation under a path containing spaces, with an unrelated consumer working directory and existing output files. Produce a tenancy post, its image, and Word document.",
+      "expected_output": "Resolve all sibling references and picture assets from their actual installed directories. Keep intermediates and final artifacts under the consumer workspace's output directories and preserve unrelated files. Final chat and DOCX post text, title, and hashtags agree after humanization; DOCX rendering and metadata are checked. Link only the selected image and updated Word file, with no obsolete draft deliveries."
+    },
+    {
+      "id": 10,
+      "name": "standalone-requests-retain-existing-routing",
+      "prompt": "Write only a Chinese Rednote post about rental bonds. Do not create a picture.",
+      "expected_output": "Use the existing text-only skill rather than implicitly starting rednote-post. Likewise, image-only requests and standalone humanizer requests remain with their existing skills. Do not add an image, orchestrated document refresh, or extra workflow stages to a text-only request."
+    }
+  ]
+}

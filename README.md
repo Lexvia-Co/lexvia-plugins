@@ -4,6 +4,30 @@ Lexvia & Co. official plugin repository.
 
 The marketplace contains Legal, Marketing, and Development (`lexvia-testing`) plugins.
 
+## Complete Rednote posts
+
+Marketing's `rednote-post` skill runs `rednote-content`, `rednote-picture`, and
+`humanizer` in that order to create a Chinese legal educational post and a matching
+LEXVIA image. It checks the humanized copy against the rendered image and corrects
+the image when their claims diverge. The final delivery includes the revised post,
+an inline image, available image-file links, and an updated Word document.
+
+Example requests:
+
+- “Use $rednote-post to explain NSW rental bonds to Chinese-speaking renters, with
+  a matching LEXVIA cover.”
+- “帮我做一篇关于新州租房押金的小红书图文：先写文案，再配图，最后用 humanizer
+  润色文案，并检查图文一致。”
+
+Text-only writing, image-only generation, and standalone rewriting keep their
+existing skills. The workflow retains the content skill's editorial restrictions
+and the picture skill's branding requirements. It creates deliverables in the
+consumer workspace's `output/intermediate` and `output/final`, not the installed
+plugin, and does not publish posts.
+
+See the [orchestrator skill](plugins/lexvia-marketing/skills/rednote-post/SKILL.md)
+and its [behavioral evaluation cases](plugins/lexvia-marketing/skills/rednote-post/evals/evals.json).
+
 ## Interface design in Marketing
 
 Marketing includes `design-taste-frontend` for art direction and `ui-ux-pro-max` for
