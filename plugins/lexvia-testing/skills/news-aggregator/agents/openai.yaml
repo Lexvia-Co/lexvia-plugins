@@ -1,0 +1,4 @@
+interface:
+  display_name: "澳洲移民小红书选题库"
+  short_description: "面向中文与亚洲背景受众的移民社媒选题"
+  default_prompt: "使用 $australia-immigration-news 收集最近一周面向中文及亚洲背景用户的澳洲移民热点，并给出 12 至 20 个小红书选题。"
