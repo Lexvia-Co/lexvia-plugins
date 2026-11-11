@@ -4,9 +4,7 @@ description: >-
   Create a complete LEXVIA Rednote post with Chinese legal educational copy and a
   matching branded image. Orchestrate rednote-content, rednote-picture, and humanizer
   in that order, then reconcile the image with the humanized text and deliver both
-  with an updated Word document. Use for end-to-end Rednote or Xiaohongshu post
-  requests needing both copy and an image, or when explicitly invoked. Text-only
-  writing, image-only generation, and standalone rewriting use their existing skills.
+  with an updated Word document. Use when asked to generate any Rednote or Xiaohongshu post.
 ---
 
 # Rednote post
