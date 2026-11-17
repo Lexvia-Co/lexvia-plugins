@@ -1,70 +1,113 @@
-# lexvia-plugins
+# Plugin Marketplace
 
-Lexvia & Co. official plugin repository.
+A collection of reusable agent skills for legal research and documents, marketing
+and design, and development. Skills are grouped into three plugins: Legal,
+Marketing, and Development.
 
-The marketplace contains Legal, Marketing, and Development (`lexvia-testing`) plugins.
+## Marketplace structure
 
-## Complete Rednote posts
+```text
+.agents/plugins/marketplace.json   Marketplace index and plugin sources
+plugins/
+  <plugin>/
+    .codex-plugin/plugin.json      Plugin metadata and skill directory
+    skills/
+      <skill>/
+        SKILL.md                  Purpose, invocation rules, and workflow
+        agents/                   Optional agent metadata and invocation policy
+        references/               Optional supporting guides
+        scripts/                  Optional helper tools
+        assets/                   Optional templates and media
+    examples/                     Examples, where supplied
+```
 
-Marketing's `rednote-post` skill runs `rednote-content`, `rednote-picture`, and
-`humanizer` in that order to create a Chinese legal educational post and a matching
-LEXVIA image. It checks the humanized copy against the rendered image and corrects
-the image when their claims diverge. The final delivery includes the revised post,
-an inline image, available image-file links, and an updated Word document.
+The marketplace index lists the plugins, and each plugin manifest points to its
+skills. A skill's invocation name comes from the `name` field in `SKILL.md`; it can
+differ from its folder name. Supporting files vary by skill.
 
-Example requests:
+## How to use
 
-- “Use $rednote-post to explain NSW rental bonds to Chinese-speaking renters, with
-  a matching LEXVIA cover.”
-- “帮我做一篇关于新州租房押金的小红书图文：先写文案，再配图，最后用 humanizer
-  润色文案，并检查图文一致。”
+1. Enable the relevant plugin in your agent.
+2. Select a skill in the skill picker, or explicitly request it by name, such as
+   “Use $humanizer to edit the following paragraph.”
+3. Supply the inputs mentioned below, plus your audience, desired output, and any
+   constraints. For file-based work, attach the files or identify their workspace
+   location.
 
-Text-only writing, image-only generation, and standalone rewriting keep their
-existing skills. The workflow retains the content skill's editorial restrictions
-and the picture skill's branding requirements. It creates deliverables in the
-consumer workspace's `output/intermediate` and `output/final`, not the installed
-plugin, and does not publish posts.
+`humanizer` and `pdf` appear in multiple plugins; choose the intended plugin's
+version when selecting them. Available tools and dependencies vary by workflow;
+each `SKILL.md` contains the detailed requirements.
 
-See the [orchestrator skill](plugins/lexvia-marketing/skills/rednote-post/SKILL.md)
-and its [behavioral evaluation cases](plugins/lexvia-marketing/skills/rednote-post/evals/evals.json).
+## Legal skills
 
-## Interface design in Marketing
+| Skill | Overview | Example request / inputs |
+| --- | --- | --- |
+| `australia-migration-watch` | Verify Australian migration-policy changes and produce Chinese alerts or weekly PDF reports. | “Use $australia-migration-watch for this week's verified policy changes.” |
+| `australian-minimum-pay` | Research statutory minimum pay, award coverage, and classifications. | “Use $australian-minimum-pay for a Sydney retail assistant.” Include duties and employer industry if known. |
+| `fill-form` | Fill a draft PDF from document evidence, with citations and a gaps report. | “Use $fill-form with this blank PDF and evidence folder.” Identify the intended subject. |
+| `humanizer` | Make prose sound natural while preserving its meaning and facts. | “Use Legal's humanizer to edit this explanation.” Supply the draft. |
+| `market-salary-test` | Research Australian market salaries and recommend a sourced base-salary range and target. | “Use $market-salary-test for a Melbourne software engineer with five years' experience.” |
+| `org-chart` | Create an organization chart in a Word document from reporting relationships. | “Use $org-chart with this reporting hierarchy.” Supply roles and any labels to include. |
+| `pdf` | Read, create, extract, merge, split, OCR, and fill PDFs. | “Use Legal's pdf skill to extract tables from these PDFs.” |
 
-Marketing includes `design-taste-frontend` for art direction and `ui-ux-pro-max` for
-searchable UX, accessibility, interaction, responsive layout, charts, and framework guidance.
-Taste leads visual direction when both are used. Pro Max also supports a standalone workflow
-when explicitly requested.
+Minimum-pay research and market-salary benchmarking are separate workflows.
+`fill-form` prepares drafts; it does not sign or submit forms.
 
-Example requests:
+## Marketing skills
 
-- “Build a landing page for our migration practice using Taste for art direction and UI UX Pro Max
-  for accessibility and Next.js implementation guidance.”
-- “Use UI UX Pro Max to fix keyboard focus and form validation in this React app. Keep the existing design.”
-- “Use UI UX Pro Max alone to design a new analytics dashboard.”
+### Content and documents
 
-Pro Max's search tool requires Python 3 and uses only the standard library, with no network
-access or package installation. It runs from the installed skill directory. Saving a design
-system is optional and targets the consumer project, preserving existing files unless an
-overwrite is explicitly authorized.
+| Skill | Overview | Example request / inputs |
+| --- | --- | --- |
+| `marketing-ideas` | Generate marketing ideas, channel strategies, and growth experiments. | “Use $marketing-ideas for a budgeting app with a small launch budget.” |
+| `ai-image-creator` | Develop image prompts, visual concepts, and social-content asset plans. | “Use $ai-image-creator to plan three product-launch visuals.” Supply the product and target platform. |
+| `humanizer` | Edit AI-sounding prose while preserving facts and the writer's voice. | “Use Marketing's humanizer to revise this landing-page copy.” |
+| `meeting-minutes` | Turn transcript text into concise Chinese meeting-minutes PDFs with decisions and actions. | “Use $meeting-minutes on this transcript.” Paste the text or attach a UTF-8 `.txt` file. |
+| `pdf` | Create and process PDF documents, including extraction, OCR, and page operations. | “Use Marketing's pdf skill to merge these documents.” |
+| `rednote-content` | Research and write Simplified Chinese legal educational copy for Rednote. | “Use $rednote-content to explain NSW rental bonds to renters.” Explicitly name this skill. |
+| `rednote-picture` | Turn supplied Chinese or bilingual legal copy into a finished social-media image. | “Use $rednote-picture for the following post.” Supply the copy or headline and supporting points. |
+| `rednote-post` | Coordinate copywriting, image generation, humanizing, and alignment checks; deliver a post, image, and Word document. | “Use $rednote-post and $rednote-content to create a rental-bond post with a matching cover.” |
 
-See the [skill README](plugins/lexvia-marketing/skills/ui-ux-pro-max/README.md) for
-the pinned upstream source, local adaptations, and verification commands.
+`rednote-content` requires an explicit user request naming it, including when used
+within a complete post workflow. Use `rednote-picture` for image-only requests and
+`humanizer` for rewriting. These skills create deliverables rather than publishing
+posts.
 
-## Impeccable as an alternative
+### Interface design
 
-Marketing also includes an explicitly selected, manual adaptation of Impeccable 4.8.2.
-It provides design, critique, audit, refinement, and documentation playbooks using the
-agent's available tools. The Taste/Pro Max workflow remains the default.
+| Skill | Overview | Example request / inputs |
+| --- | --- | --- |
+| `design-taste-frontend` | Develop visual direction and implement web pages or app screens with screenshot review. | “Use $design-taste-frontend to redesign this portfolio.” Supply the project or page. |
+| `ui-ux-pro-max` | Provide searchable UX, accessibility, layout, chart, and framework guidance. | “Use $ui-ux-pro-max to improve keyboard focus in this React form.” |
+| `impeccable` | Apply explicitly selected design, critique, audit, and refinement playbooks. | “Use $impeccable to audit this checkout.” Specify whether to report findings or make changes. |
 
-Example requests:
+Taste leads art direction when paired with Pro Max. Pro Max can also handle focused
+UX fixes or an explicitly requested standalone design workflow. Impeccable is an
+explicitly selected alternative. The Taste skill lives in `taste-skill/`.
 
-- “Use Impeccable to redesign this landing page.”
-- “$impeccable audit the checkout form. Report findings without changing files.”
-- “$impeccable polish the settings screen. Preserve its design and copy.”
+### Posters and motion
 
-Audit and critique return reports in chat. Product/design documents and saved reports
-are written only when requested. This adaptation includes no engine, deterministic
-detector, downloads, hooks, live variants, or agent registrations.
+| Skill | Overview | Example request / inputs |
+| --- | --- | --- |
+| `morandi-cinematic-poster-zeejay` | Turn a supplied photograph into a restrained cinematic poster using typography. | “Use $morandi-cinematic-poster-zeejay on this travel photo.” |
+| `scene-distillation-zine-v1-3` | Reinterpret a photo as a minimal illustrated zine poster without retaining photographic material. | “Use $scene-distillation-zine-v1-3 to make an illustrated poster from this photo.” |
+| `scenes-gathered-zine-v1-3` | Combine retained photography, simplified illustration, and a torn-paper edge. | “Use $scenes-gathered-zine-v1-3 to make a paper-collage poster from this photo.” |
+| `scenes-gathered-zine-live-flow-v1-0` | Create a poster and paper-tear Live Photo ZIP, with an optional macOS importer handoff. | “Use $scenes-gathered-zine-live-flow-v1-0 on this photo, ZIP only.” |
+| `video-shotcraft` | Create cinematic product videos using shot recipes, templates, screenshots, motion, and audio. | “Use $video-shotcraft to make a 20-second product promo from this project using the template.” |
 
-See the [Impeccable README](plugins/lexvia-marketing/skills/impeccable/README.md)
-for the supported commands, source, license notices, and verification scenarios.
+The Live Photo workflow also bundles `scenes-gathered-zine-v1-9` under
+`references/static-poster-v1-9/`. It preserves photographic regions and blends them
+with simplified illustration. For a static-only result, request that bundled
+module and supply a photo; no animation is needed.
+
+## Development skills
+
+| Skill | Overview | Example request / inputs |
+| --- | --- | --- |
+| `mcp-builder` | Build MCP servers that expose APIs and services through agent tools. | “Use $mcp-builder to expose this API through a TypeScript MCP server.” Supply API documentation and required operations. |
+| `australia-immigration-news` | Verify Australian immigration, study, and work news for Chinese topic banks or weekly digests. | “Use $australia-immigration-news to create this week's topic bank.” |
+| `humanizer` | Rewrite prose naturally without changing supported meaning or facts. | “Use Development's humanizer to edit this technical introduction.” |
+| `pdf` | Read and manipulate PDFs, including extraction, merging, OCR, and forms. | “Use Development's pdf skill to make this scanned PDF searchable.” |
+
+The news skill lives in `news-aggregator/` and supports public-news research and
+content planning. Use `australia-migration-watch` for official policy-change alerts.
