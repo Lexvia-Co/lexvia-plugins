@@ -107,7 +107,7 @@ same final text. Do not restart the content/humanizer cycle or loop image repair
 
 Export the humanized text to the final Word document using the applicable document
 skill without opening Microsoft Word. Inspect its rendered layout, extracted text,
-and metadata. Its post text must match the final chat copy, including title and
+and metadata. Its post text must match the final chat copy, including title, emojis, and
 hashtags, and pass the content skill's checks. Do not link a provisional Word file
 or an obsolete image as a final deliverable.
 
