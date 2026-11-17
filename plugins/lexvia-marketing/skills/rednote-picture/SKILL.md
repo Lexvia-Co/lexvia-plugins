@@ -36,7 +36,7 @@ If the user gives only a title or a short fragment, create a title-led editorial
 When the user supplies an actual image associated with the post, treat it as the primary visual direction for that post. First infer its subject type, framing, sense of place, energy, text density, and palette; use `example/` to retain LEXVIA's brand finish. Do not copy the supplied image exactly unless the user asks for an edit or close reproduction.
 
 - Preserve the shared house language at the level of tone rather than a template: calm, polished, premium Australian legal-advisory editorial design; clear Chinese typography; deliberate material and photographic choices; and a strong sense of order.
-- Preserve the information design principles: an obvious title-led hierarchy, concise explanatory text, generous whitespace, and readable grouping. Use rules, panels, cards, annotations, icons, or lists only when they clarify that particular story.
+- Preserve the information design principles: an obvious title-led hierarchy, readable grouping, and purposeful whitespace. The reference standard is a rich, structured editorial poster rather than an ultra-minimal cover: alongside the headline, include enough concise on-image information to make the post useful at a glance. Use rules, pull quotes, panels, cards, annotations, icons, numbered points, or lists whenever they clarify the story.
 - Use `example/` to learn the shared level of polish, editorial pacing, typography, image treatment, whitespace, and information hierarchy. The examples are not the source of the palette: the logo asset defines the fixed LEXVIA brand palette, while the supporting topic colour is selected afresh for the specific story.
 - `LEXVIA_RED` is the company's mandatory brand anchor. Use it in a deliberate, topic-appropriate form rather than a fixed red footer, red information band, or predominantly red image.
 - Treat only elements repeated across the library as house rules. Vary the specific hero image, topic metaphor, layout, and information modules to fit the supplied legal content.
@@ -61,7 +61,7 @@ Create a premium Australian legal-advisory editorial image in a portrait social-
 - Use `LEXVIA_RED` in every image as a visible brand anchor. It may appear as a headline emphasis, underline, seal, shape, glow, editorial colour field, or controlled hero-image detail. Keep its scale proportionate to the concept: do not default to a red footer or information band, and do not require an overwhelmingly red image. If an exact brand colour value is recorded with the official logo asset, use it faithfully.
 - Within each image, commit to a disciplined palette with strong contrast for readable Chinese type. Avoid green plants/foliage unless they serve the subject.
 - Lead with the visual that carries the strongest sense of the event. For regional migration, visa, or state-policy news, prefer a real location or credible news-photography-style scene. Use a contract spread, title certificate, dossier, letter/envelope, ribboned transfer path, key, seal, or other abstract legal object only when a place, people, or relevant environment cannot tell the story as well.
-- Use refined, high-contrast Chinese headline typography with a clear hierarchy. Set one large title, one concise takeaway or quote, then only the supporting information that can be read comfortably on a phone.
+- Use refined, high-contrast Chinese headline typography with a clear hierarchy. Set one large title, a concise takeaway or quote, and a meaningful set of supporting information that can still be read comfortably on a phone. For a substantive policy update, the normal target is 3–5 short labelled changes, eligibility points, consequences, or practical reminders—not merely a headline and one sentence.
 - For a distinction or comparison, express it physically and editorially: paired documents, a split composition, a ribbon/trajectory, a central balancing object, or a contained comparison panel. Do not default to bar charts, icons, or card grids.
 - Every image must display the complete official LEXVIA logo asset. Give it calm breathing room in a deliberate signature area; its position, ground, and treatment must follow the composition rather than a repeated footer formula. Preserve its original aspect ratio, complete lock-up, and brand colours.
 - Keep backgrounds and props intentional: books, fountain pens, seals, keys, paper texture, brass objects, architectural models, real landscapes, and softly out-of-focus interiors are welcome when relevant. Plants are optional accents only, never the default motif.
@@ -74,7 +74,15 @@ The target is the visual language established by `example/`: a polished Chinese 
 
 ## Let the legal idea drive the image
 
-Do not turn every numbered article into cards. Prefer one coherent visual narrative. For news-style covers, preserve the main scene and compress the message into a headline, one key conclusion, and at most one short qualifier or callout. Use a lower informational panel or a compact numbered list only when the source genuinely has multiple actionable points and the layout can keep each point legible.
+Do not turn every numbered article into cards. Prefer one coherent visual narrative, but do not reduce a substantive update to an empty cover. News-style covers should retain the main scene while layering a headline, one key conclusion or pull quote, and the most useful supporting points. Where the source contains multiple changes, use a lower informational panel, a compact numbered list, icons with short labels, or two to five clearly separated callouts—as the reference posts do—provided every element remains legible on a phone.
+
+### Default information density
+
+- **Short single-point post:** headline, short takeaway, and one supporting label or callout.
+- **Policy, migration, or legal-update post:** headline, date/source or context label where supplied, one takeaway or quote, and 3–5 short policy implications or key changes.
+- **Comparison/explainer post:** headline, central distinction, and 2–4 paired points or clearly labelled practical consequences.
+- Use the page vertically: a hero scene can occupy one region, while an informational panel, quote field, or grouped point modules occupy another. Do not leave large empty areas merely to appear premium.
+- Keep text concise and scannable; richness comes from hierarchy, editorial modules, and relevant context—not paragraphs or tiny legalese.
 
 For example:
 
@@ -84,12 +92,12 @@ For example:
 - Family funds: a transfer path separating a gift declaration from a loan agreement.
 - Immigration policy: a speech dossier or policy lines branching from the news event.
 
-Use short labels, margin notes, callouts, document annotations, trajectories, or a comparison only when they clarify the main legal point. Use cards or a list only when that is genuinely the clearest option.
+Use short labels, margin notes, callouts, document annotations, trajectories, or a comparison when they clarify the main legal point. For content with several practical changes, a well-edited card row, numbered sequence, or grouped list is preferred over omitting the information; avoid cards only when they compete with a stronger editorial treatment.
 
 ## Text standards
 
 - Keep the title, central takeaway, and legal caution highly legible and inside safe margins.
-- Use only the minimum on-image text needed to communicate the point: normally a title, one key distinction, and an optional short caution. Do not attempt to reproduce a long article verbatim.
+- Use a concise but sufficient amount of on-image text: normally a title, key distinction or takeaway, and supporting points appropriate to the post type. For policy updates, include 3–5 short, source-grounded highlights when available. Do not reproduce the full article verbatim or shrink text below comfortable phone readability.
 - Use Simplified Chinese for visible content by default. A short, accurate official program name, visa subclass, or institution name may remain in English when it materially helps recognition and is part of the supplied source, for example `NT Graduate / NT Resident` or `MigrationNT`.
 - Do not mechanically translate or print an English legal term beside its Chinese equivalent. Convert the underlying idea into plain, accurate Chinese that an everyday reader can grasp (for example, use “登记业主” rather than `registered proprietor`, and “登记在产权上的限制或权益” where that explains the point better than a string of English terms). Keep specialist English out of decorative document props, labels, seals, books, and background scenery as well.
 - Preserve supplied source/caveat wording where present. If none is supplied, use a small general-information disclaimer only if legal-brand context has already made it expected.
