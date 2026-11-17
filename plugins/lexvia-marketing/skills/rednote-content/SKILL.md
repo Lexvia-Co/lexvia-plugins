@@ -1,12 +1,12 @@
 ---
 name: "rednote-content"
-description: "
-Write Chinese legal educational content published on social media platform Rednote.
-Use when asked to generate or write any Chinese legal content to publish on any social media platform.
-"
+description: >-
+  Write Chinese legal educational content for Rednote. Use only when the user
+  explicitly requests the rednote-content skill by name.
 ---
 
 # Generating legal educational content on Rednote
+
 
 ## Overview
 A blog writing skill that generates legal educational content for Rednote, a Chinese social media platform. The content should be concise, informative, and engaging, suitable for the target audience of the platform. The content should be written in a clear and accessible manner, avoiding complex legal jargon and providing practical insights and tips.
