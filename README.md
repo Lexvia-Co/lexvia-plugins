@@ -15,6 +15,7 @@ plugins/
       <skill>/
         SKILL.md                  Purpose, invocation rules, and workflow
         agents/                   Optional agent metadata and invocation policy
+        evals/                    Optional evaluation scenarios
         references/               Optional supporting guides
         scripts/                  Optional helper tools
         assets/                   Optional templates and media
@@ -61,10 +62,11 @@ Minimum-pay research and market-salary benchmarking are separate workflows.
 | --- | --- | --- |
 | `marketing-ideas` | Generate marketing ideas, channel strategies, and growth experiments. | “Use $marketing-ideas for a budgeting app with a small launch budget.” |
 | `ai-image-creator` | Develop image prompts, visual concepts, and social-content asset plans. | “Use $ai-image-creator to plan three product-launch visuals.” Supply the product and target platform. |
+| `au-discount-info` | Verify current and upcoming Australian deals against official sources. Show PNG calendars and category cards in chat and bundle them in a ZIP. | “Use $au-discount-info to find current electronics deals in Australia.” Include a location, category, or retailer if relevant. |
 | `humanizer` | Edit AI-sounding prose while preserving facts and the writer's voice. | “Use Marketing's humanizer to revise this landing-page copy.” |
 | `meeting-minutes` | Turn transcript text into concise Chinese meeting-minutes PDFs with decisions and actions. | “Use $meeting-minutes on this transcript.” Paste the text or attach a UTF-8 `.txt` file. |
 | `pdf` | Create and process PDF documents, including extraction, OCR, and page operations. | “Use Marketing's pdf skill to merge these documents.” |
-| `rednote-content` | Research and write Simplified Chinese legal educational copy for Rednote. | “Use $rednote-content to explain NSW rental bonds to renters.” Explicitly name this skill. |
+| `rednote-content` | Research and write Simplified Chinese legal educational copy for Rednote. Keep specialist terms, official names, and verified acronyms in English. | “Use $rednote-content to explain NSW rental bonds to renters.” Explicitly name this skill. |
 | `rednote-picture` | Turn supplied Chinese or bilingual legal copy into a finished social-media image. | “Use $rednote-picture for the following post.” Supply the copy or headline and supporting points. |
 | `rednote-post` | Coordinate copywriting, image generation, humanizing, and alignment checks; deliver a post, image, and Word document. | “Use $rednote-post and $rednote-content to create a rental-bond post with a matching cover.” |
 

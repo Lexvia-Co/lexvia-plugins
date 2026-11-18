@@ -21,7 +21,7 @@ No legal topic is preselected. Choose the subject for each post and verify the a
 - Template copy and placeholders are in Chinese. Filenames, focus descriptions and legal topic fields are in English.
 - Choose a topic at the time of use; none of the templates is restricted to a particular area of Australian law.
 - Label hypothetical stories clearly. Use verified sources for real cases and outcomes.
-- Any legal terminology must not be translated from English to Chinese. 
+- Before filling placeholders or translating research, read [Terminology preservation](../references/terminology-preservation.md). Keep legal, migration, tax, finance, property and business terms, official names and verified acronyms in English in all template sections and hashtags. Chinese prose may explain their function or effect without supplying Chinese equivalent names or transliterations.
 - Do not include any source or link in the draft. 
 - Do not include any citation in the draft. 
 

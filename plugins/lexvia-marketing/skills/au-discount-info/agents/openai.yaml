@@ -1,0 +1,4 @@
+interface:
+  display_name: "Australian Discount Information"
+  short_description: "Track Australian deals and build sale calendars"
+  default_prompt: "Use $au-discount-info to find current deals across Australia, show the PNG calendar and category cards in chat, and deliver a ZIP with every PNG."

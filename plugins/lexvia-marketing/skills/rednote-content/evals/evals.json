@@ -1,0 +1,60 @@
+{
+  "skill_name": "rednote-content",
+  "how_to_run": "Run these requests against SKILL.md and its linked references in a disposable consumer workspace. For targeted excerpt/review requests, respect the explicit request to return Markdown only; do not run unrelated research or export a full post. Use supplied source excerpts as bounded fixtures, not as permission to add legal claims. Keep generated artifacts outside the plugin source and cache. Inspect actual outputs against expected_output; JSON validation alone is not a behavioral test. The document scenario requires a real DOCX export plus text/metadata inspection and must be reported as unverified if the document runtime is unavailable.",
+  "evals": [
+    {
+      "id": 1,
+      "name": "listed-terms-and-functional-explanation",
+      "prompt": "Use $rednote-content for this terminology-only translation exercise. Return a short Chinese Markdown excerpt only, not a full post or Word file. Supplied verified source excerpt: 'A binding financial agreement and consent orders are different ways of formalising financial arrangements.' Include the full English name and BFA on first use. Explain the distinction only to the extent stated in the excerpt, without adding legal requirements.",
+      "expected_output": "Chinese surrounding prose preserves Binding Financial Agreement (BFA) and consent orders. A Chinese sentence can explain their stated function or distinction but must not introduce Chinese equivalent names, transliterations or bracketed translations. Do not add unsupported legal conditions."
+    },
+    {
+      "id": 2,
+      "name": "unlisted-specialist-term-uses-source",
+      "prompt": "Use $rednote-content to turn this verified source excerpt into one short Chinese paragraph, Markdown only: 'A caveat is a form of statutory injunction that prevents the registration of particular dealings with real property.' The source is NSW Land Registry Services: https://www.nswlrs.com.au/getdoc/6712d745-05df-4125-a599-247018327de5/Caveat-Industry-Brochure.aspx . Check the official wording if the page is available; otherwise identify the verification gap in separate research notes. Do not add procedural advice or make a Word file.",
+      "expected_output": "Treat caveat as a specialist property term even though it is absent from the starter table. Preserve it in English and use the official source for terminology verification. If the source cannot be accessed, do not claim it was verified or present an uncertain final translation as verified; keep the gap in research notes. Do not add the term to the installed skill or substitute a Chinese name."
+    },
+    {
+      "id": 3,
+      "name": "ordinary-prose-and-context-sensitive-terms",
+      "prompt": "Use $rednote-content for a terminology-only translation check, Markdown only. Translate these independent sentences without adding facts: 'Thank you for your consideration. Please save the email before our meeting.' 'The contract uses consideration as a legal term.' Keep them separate; do not create a Word file.",
+      "expected_output": "Translate the ordinary courtesy sentence and ordinary email/meeting language naturally into Chinese. Preserve consideration in the contract-law sentence. Do not preserve all English nouns merely because a sentence mentions a contract."
+    },
+    {
+      "id": 4,
+      "name": "restore-terms-in-existing-chinese-draft",
+      "prompt": "Use $rednote-content to edit this supplied draft for terminology, Markdown only, without creating a Word file: '先了解有约束力的财务协议（BFA，婚前协议），再看看同意令。' Verified research notes identify the intended terms as Binding Financial Agreement (BFA) and consent orders, with no assertion that all such agreements concern marriage before a wedding. Keep the result concise and do not add legal claims.",
+      "expected_output": "Restore Binding Financial Agreement (BFA) and consent orders; remove the Chinese equivalent names and the misleading Chinese bracketed label. Preserve the limited message of the source without inventing a narrower scope or introducing another Chinese synonym."
+    },
+    {
+      "id": 5,
+      "name": "titles-captions-and-hashtags",
+      "prompt": "Use $rednote-content for a terminology-only edit, Markdown only. Produce a title, one caption and two hashtags for a supplied verified explainer comparing Binding Financial Agreement (BFA) and consent orders. Make no legal claims beyond saying it compares them. Keep professional names readable and do not export Word.",
+      "expected_output": "Preserve the English terms or verified BFA acronym in the title and caption. Hashtags may use a verified acronym or general Chinese audience/location tags. Do not create translated terminology, invented acronyms or compressed multiword English names to fit a tag."
+    },
+    {
+      "id": 6,
+      "name": "tone-review-preserves-specialist-and-official-names",
+      "prompt": "Use $rednote-content and its tone guide to make this supplied excerpt more conversational, Markdown only, with no Word export or new facts: '本文整理 Australian Consumer Law (ACL)、goods and services tax (GST)、Australian business number (ABN) 和 NSW Civil and Administrative Tribunal (NCAT) 的名称，帮助读者辨认材料里的用词。' Preserve the distinction between names and explanations.",
+      "expected_output": "Keep ACL, GST, ABN, NCAT and their English expansions intact during tone editing, and keep surrounding prose in Simplified Chinese. Do not add Chinese equivalent names or treat one institution as another. Preserve tax, business and official terminology as well as legal terms."
+    },
+    {
+      "id": 7,
+      "name": "uncertain-term-does-not-trigger-invention",
+      "prompt": "Use $rednote-content for a terminology review only. A draft says '这份保障文件决定谁能签字', but its author supplied no English term, document, issuing body or jurisdiction. Identify what you need to resolve the terminology. Return a short Markdown note only; do not produce a post or Word file.",
+      "expected_output": "Ask for the document or original English wording and relevant context rather than guessing a legal instrument or inventing an acronym. Do not present the ambiguous Chinese label as verified specialist terminology."
+    },
+    {
+      "id": 8,
+      "name": "word-export-and-metadata-consistency",
+      "prompt": "Use $rednote-content to export this supplied, verified final excerpt to Word: title '认识 Binding Financial Agreement (BFA) 与 consent orders'; body '这篇只整理两种名称，方便你辨认材料里的用词。' Treat this as an export-only fixture, not a request for new research or a full post. Preserve the terms in the document title, visible text and title metadata. Use the consumer workspace's output/final directory.",
+      "expected_output": "Create and inspect a real DOCX with the reviewed English terminology intact in its visible title/text and relevant metadata. Do not introduce Chinese equivalents during export. Apply the existing no-UI-tools rule; keep the document out of plugin source and cache. If the required document runtime is unavailable, report the export check as unverified rather than claiming success."
+    },
+    {
+      "id": 9,
+      "name": "topic-restriction-precedes-terminology-research",
+      "prompt": "Use $rednote-content for a handling test. The requested subject has already been identified as excluded by the skill's mandatory editorial restriction. The requester now asks for only an English terminology glossary and sources for that same subject. Respond to the requester without restating or developing the excluded subject. Do not create files.",
+      "expected_output": "Stop before terminology research, drafting or artifact creation. Give only a brief scope response and unrelated permitted alternatives without naming or explaining the excluded subject. The new source directory and terminology rules do not override the existing restriction."
+    }
+  ]
+}
